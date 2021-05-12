@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.card { 
+    width: 120px;
+    height: 120px;
+    position: relative;
+    transform-style: preserve-3d ;
+    transition: transform .5s;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(141, 139, 139);
+    transform: rotateY(180deg);
+}
+
+.back, .front{
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip{
+    transform: rotateY(180deg);
+}
+
+
+.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(141, 139, 139);
+    /* display: none; */
+}
+
+#gameOver{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 60px;
+    background-color: rgba(3, 3, 3, 0.904);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+}
+
+#restart{
+    padding: 20px;
+    font-size: 30px;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    color: white;
+    text-decoration: underline;
+}
+
+#restart:hover{
+    background-color: yellow;
+    color: black;
+}
+
+#bord{
+    max-width: 700px;
+    background-color: rgb(199, 204, 202);
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
