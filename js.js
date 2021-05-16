@@ -60,6 +60,9 @@ function flipCard() {
     this.classList.add("flip");
     if(game.checkMath()) {
         game.clearCards();
+        if(game.checkGameOver()){
+            let gameOver = document.getElementById('gameOver')
+            gameOver.style.display = "flex";
     }else{
         setTimeout(() =>{
         let firstCardView = document.getElementById(game.firstCard.id);
