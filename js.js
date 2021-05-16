@@ -63,6 +63,7 @@ function flipCard() {
         if(game.checkGameOver()){
             let gameOver = document.getElementById('gameOver')
             gameOver.style.display = "flex";
+        }
     }else{
         setTimeout(() =>{
         let firstCardView = document.getElementById(game.firstCard.id);
