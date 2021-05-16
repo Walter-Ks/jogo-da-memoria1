@@ -30,6 +30,15 @@ let game = {
         this.secondCard = null;
         this.localMode = false;
     },
+    
+    
+      checkGameOver(){
+
+
+      return this.cards.filter(card=>!card.flipped).length ==0;
+
+
+    },
 
 
     imgs: ["1",
